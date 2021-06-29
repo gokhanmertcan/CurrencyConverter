@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MWS-Iq-7uL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Döviz Kurları Uygulaması-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TRY cinsinden fiyat giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTa-Fu-2pt">
+                                <rect key="frame" x="20" y="119" width="270" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuA-05-5E4">
+                                <rect key="frame" x="302" y="119" width="92" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="78z-lX-ZbY"/>
+                                </constraints>
+                                <state key="normal" title="Hesapla">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbX-BF-bll"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JFO-GE-Ep0">
+                                <rect key="frame" x="0.0" y="195" width="414" height="701"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" systemColor="secondaryLabelColor"/>
+                                <color key="sectionIndexColor" red="0.75104601360000001" green="0.60845327930000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.017071280883780716" green="0.035801474099880257" blue="0.082914718473800497" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" textLabel="lO4-Yz-JDS" detailTextLabel="rfT-sk-Moa" rowHeight="63" style="IBUITableViewCellStyleValue1" id="pEa-UF-LTh">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pEa-UF-LTh" id="HHd-hx-hEC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lO4-Yz-JDS">
+                                                    <rect key="frame" x="20" y="21" width="36" height="21.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rfT-sk-Moa">
+                                                    <rect key="frame" x="352" y="23" width="42" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3dF-Oc-DwF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="my8-Mr-AHM"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Döviz Fiyatı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-hY-CWY">
+                                <rect key="frame" x="315.5" y="169" width="78.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Döviz Adı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnu-or-zAB">
+                                <rect key="frame" x="20" y="169" width="64.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.94705593219999995" green="0.94705593219999995" blue="0.94705593219999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xuA-05-5E4" firstAttribute="leading" secondItem="mTa-Fu-2pt" secondAttribute="trailing" constant="12" id="4ra-NX-SSW"/>
+                            <constraint firstItem="JFO-GE-Ep0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="74W-a7-gtz"/>
+                            <constraint firstItem="mTa-Fu-2pt" firstAttribute="top" secondItem="xuA-05-5E4" secondAttribute="top" id="7Rj-Gh-Yzd"/>
+                            <constraint firstItem="mTa-Fu-2pt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="9FA-kq-Uht"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JFO-GE-Ep0" secondAttribute="bottom" constant="-34" id="AHy-nL-QCh"/>
+                            <constraint firstItem="nnu-or-zAB" firstAttribute="top" secondItem="mTa-Fu-2pt" secondAttribute="bottom" constant="16" id="Hex-UI-nP3"/>
+                            <constraint firstItem="JFO-GE-Ep0" firstAttribute="top" secondItem="nnu-or-zAB" secondAttribute="bottom" constant="8" id="MEL-s8-xxj"/>
+                            <constraint firstItem="nnu-or-zAB" firstAttribute="baseline" secondItem="Fnd-hY-CWY" secondAttribute="baseline" id="cAE-a5-VsK"/>
+                            <constraint firstItem="mTa-Fu-2pt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gOl-YX-deq"/>
+                            <constraint firstItem="xuA-05-5E4" firstAttribute="trailing" secondItem="Fnd-hY-CWY" secondAttribute="trailing" id="gof-xf-s6X"/>
+                            <constraint firstItem="mTa-Fu-2pt" firstAttribute="leading" secondItem="nnu-or-zAB" secondAttribute="leading" id="ikf-5W-Gff"/>
+                            <constraint firstItem="xuA-05-5E4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mJL-Hm-sga"/>
+                            <constraint firstItem="mTa-Fu-2pt" firstAttribute="bottom" secondItem="xuA-05-5E4" secondAttribute="bottom" id="tnX-ek-S73"/>
+                            <constraint firstItem="JFO-GE-Ep0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vmP-Zy-T8F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Döviz Kurları Uygulaması" id="IEN-JO-gdS">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="info.circle" catalog="system" id="SZS-XZ-Hix">
+                            <color key="tintColor" red="0.3294117647" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="kDt-nU-vEm">
+                            <color key="tintColor" red="0.3294117647" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnCalculate" destination="xuA-05-5E4" id="zlj-rm-iW6"/>
+                        <outlet property="tblView" destination="JFO-GE-Ep0" id="lMn-B7-7EF"/>
+                        <outlet property="textField" destination="mTa-Fu-2pt" id="Nwp-ac-yPn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834.78260869565224" y="-3.3482142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HDp-iT-MOj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MWS-Iq-7uL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M2t-ss-UFK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.3294117647" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wjK-hR-Shj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0if-2F-qpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75.362318840579718" y="-3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
